@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#fbb135</color>
+    <color name="secondary">#CDD0D9</color>
+    <color name="text">#151d2d</color>
+    <color name="text_alpha">#8A8E96</color>
+    <color name="background">#ffffff</color>
+
+    <color name="outcome">#e7513a</color>
+    <color name="white">#ffffff</color>
+
+    <color name="gift">#6fadfe</color>
+    <color name="shopping">#ef5d9b</color>
+    <color name="entertainment">#a95dfe</color>
+    <color name="eating">#f0825b</color>
+    <color name="income">#a0ce4a</color>
+    <color name="other">#949cb7</color>
+</resources>

@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Wallet</string>
+
+    <!-- Error -->
+    <string name="current_amount_error_invalid_amount">Entrez une valeur positive</string>
+    <string name="payment_location_error_invalid_location">Veuillez entrer l\'endroit d\'achat</string>
+    <string name="no_payment">Aucun paiement pour le moment</string>
+
+    <!-- Button -->
+    <string name="save">Enregistrer</string>
+    <string name="next">Suivant</string>
+    <string name="start">Commencer</string>
+    <string name="skip">Ignorer</string>
+
+    <!-- Title -->
+    <string name="current_enter_label">Entrez le montant contenu dans votre porte monnaie</string>
+    <string name="insert_payment_label">Ajouter un nouveau paiement</string>
+    <string name="edit_payment_label">Modifier le paiement</string>
+    <string name="detail_payment_label">Paiement :</string>
+    <string name="on_board_expenses_title">Suivis de dépenses</string>
+    <string name="on_board_data_title">Données sécurisées</string>
+    <string name="on_board_stats_title">Statistiques</string>
+
+    <!-- Fragment Label -->
+    <string name="edit_fragment_title">Modifier un paiement</string>
+    <string name="home_fragment_title">Bienvenue,</string>
+    <string name="list_fragment_title">Liste</string>
+    <string name="new_fragment_title">Ajouter un paiement</string>
+    <string name="on_board_fragment_title">Présentation</string>
+    <string name="current_fragment_title">Porte monnaie</string>
+    <string name="detail_fragment_title">Détails</string>
+
+    <!-- Text -->
+    <string name="on_board_expenses_text">Enregistrer et retrouver la liste de toutes vos dépenses.
+        <br /> Suivez le contenu de votre porte monnaie en temps réel sans avoir à le sortir.</string>
+    <string name="on_board_data_text">Toutes les dépenses que vous enregistrer sont stockées sur votre téléphones.</string>
+    <string name="on_board_stats_text">Accédez à un ensemble de statistiques pour mieux comprendre et gérer vos dépenses.</string>
+
+    <!-- Label -->
+    <string name="amount_label">Prix</string>
+    <string name="location_label">Lieu</string>
+    <string name="category_label">Categorie</string>
+
+    <!-- Format -->
+    <string name="euro_format">%.2f €</string>
+    <string name="euro_format_plus">+ %.2f €</string>
+    <string name="euro_format_minus">- %.2f €</string>
+
+    <string name="today">Aujourd\'hui</string>
+    <string name="yesterday">Hier</string>
+
+    <string name="big_format_date">Le %d %s %d\nà %dh%d</string>
+    <string name="big_format_date_today">Aujourd\'hui\nà %dh%d</string>
+    <string name="big_format_date_yesterday">Hier\nà %dh%d</string>
+
+    <string name="gift">Cadeau</string>
+    <string name="shopping">Achat</string>
+    <string name="entertainment">Loisir</string>
+    <string name="eating">Nourriture</string>
+    <string name="income">Entrée d\'argent</string>
+    <string name="other">Autre</string>
+    <string name="see_more">tout voir</string>
+    <string name="privacy_description">Un carton avec des données collectées</string>
+    <string name="stats_description">Un homme avec des graphiques de statistiques</string>
+    <string name="expenses_description">Des hommes rangeant de l\'argent dans un porte monnaie</string>
+    <string name="calendar_description">Une icone de calendrier</string>
+    <string name="dollar_description">Un symbole dollar</string>
+    <string name="separator_description">Une barre pour séparer</string>
+    <string name="edit_description">Une icone de stylo</string>
+    <string name="trash_description">Une icone de poubelle</string>
+    <string name="plus_description">Une icone de plus</string>
+
+    <string-array name="limit_type">
+        <item>Cette Semaine</item>
+        <item>La semaine dernière</item>
+        <item>Ce mois ci</item>
+        <item>Le mois dernier</item>
+        <item>Cette année</item>
+        <item>Tous</item>
+    </string-array>
+</resources>

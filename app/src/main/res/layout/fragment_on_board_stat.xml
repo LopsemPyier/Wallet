@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.onboard.fragments.OnBoardStatFragment">
+
+
+    <ImageView
+        android:id="@+id/on_board_image_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/ic_stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/stats_description" />
+
+    <TextView
+        android:id="@+id/on_board_title_tv"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/on_board_stats_title"
+        app:layout_constraintEnd_toEndOf="@+id/on_board_image_iv"
+        app:layout_constraintStart_toStartOf="@+id/on_board_image_iv"
+        app:layout_constraintTop_toBottomOf="@+id/on_board_image_iv" />
+
+    <TextView
+        android:id="@+id/on_board_text_tv"
+        style="@style/TextSmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/on_board_stats_text"
+        android:textColor="@color/text_alpha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/on_board_title_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

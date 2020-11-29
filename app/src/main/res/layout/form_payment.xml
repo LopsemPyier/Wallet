@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/amount_label_tv"
+        android:labelFor="@id/payment_amount_insert_et"
+        style="@style/Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:text="@string/amount_label"
+        app:layout_constraintStart_toStartOf="@+id/payment_amount_insert_et"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/payment_amount_insert_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        style="@style/SmallEditText"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_label_tv"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/payment_amount_error_tv"
+        style="@style/TextSmallError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/current_amount_error_invalid_amount"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/payment_amount_insert_et"
+        app:layout_constraintStart_toStartOf="@+id/payment_amount_insert_et"
+        app:layout_constraintTop_toBottomOf="@+id/payment_amount_insert_et" />
+
+
+    <TextView
+        android:id="@+id/location_label_tv"
+        style="@style/Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:alpha="0.5"
+        android:text="@string/location_label"
+        android:labelFor="@id/payment_location_insert_et"
+        app:layout_constraintStart_toStartOf="@+id/payment_location_insert_et"
+        app:layout_constraintTop_toBottomOf="@+id/payment_amount_error_tv" />
+
+    <EditText
+        android:id="@+id/payment_location_insert_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        style="@style/SmallEditText"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_label_tv"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/payment_location_error_tv"
+        style="@style/TextSmallError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/payment_location_error_invalid_location"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/payment_amount_insert_et"
+        app:layout_constraintStart_toStartOf="@+id/payment_amount_insert_et"
+        app:layout_constraintTop_toBottomOf="@+id/payment_location_insert_et" />
+
+
+    <TextView
+        android:id="@+id/category_label_tv"
+        style="@style/Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:alpha="0.5"
+        android:text="@string/category_label"
+        app:layout_constraintStart_toStartOf="@+id/category_rg"
+        app:layout_constraintTop_toBottomOf="@+id/payment_location_error_tv" />
+
+    <RadioGroup
+        android:id="@+id/category_rg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_label_tv" >
+
+        <RadioButton
+            style="@style/Category"
+            android:backgroundTint="@color/entertainment"
+            android:id="@+id/entertainment_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entertainment" />
+
+        <RadioButton
+            style="@style/Category"
+            android:backgroundTint="@color/shopping"
+            android:id="@+id/shopping_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shopping" />
+
+        <RadioButton
+            style="@style/Category"
+            android:backgroundTint="@color/income"
+            android:id="@+id/income_rb"
+            android:layout_marginEnd="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/income" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/category_rg2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_rg">
+
+
+        <RadioButton
+            style="@style/Category"
+            android:backgroundTint="@color/gift"
+            android:id="@+id/gift_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gift" />
+
+        <RadioButton
+            style="@style/Category"
+            android:backgroundTint="@color/eating"
+            android:id="@+id/eating_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eating" />
+
+        <RadioButton
+            style="@style/Category"
+            android:backgroundTint="@color/other"
+            android:id="@+id/other_rb"
+            android:checked="true"
+            android:layout_marginEnd="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/payment_save_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/save"
+        style="@style/Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_rg2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

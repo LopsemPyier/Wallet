@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.current.CurrentFragment">
+
+    <TextView
+        android:id="@+id/current_insert_label_tv"
+        style="@style/Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:text="@string/current_enter_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:labelFor="@id/current_amount_insert_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:backgroundTint="@color/primary"
+        android:id="@+id/current_amount_insert_et"
+        style="@style/BigEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_insert_label_tv"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/current_amount_error_tv"
+        style="@style/TextSmallError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/current_amount_error_invalid_amount"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/current_amount_insert_et"
+        app:layout_constraintStart_toStartOf="@+id/current_amount_insert_et"
+        app:layout_constraintTop_toBottomOf="@+id/current_amount_insert_et" />
+
+    <Button
+        android:id="@+id/current_save_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/save"
+        style="@style/Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_amount_error_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

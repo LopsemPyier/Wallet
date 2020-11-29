@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.eatthemoon.wallet.ui.home.HomeFragment"
+        android:label="@string/home_fragment_title"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/showDetail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/showMore"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/addPayment"
+            app:destination="@id/newFragment" />
+        <action
+            android:id="@+id/showFirstTimeOpen"
+            app:destination="@id/onBoardFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentFragment"
+        android:name="com.eatthemoon.wallet.ui.current.CurrentFragment"
+        android:label="@string/current_fragment_title"
+        tools:layout="@layout/fragment_current" >
+        <action
+            android:id="@+id/backHomeAfterFirstOpen"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/currentFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.eatthemoon.wallet.ui.detail.DetailFragment"
+        android:label="@string/detail_fragment_title"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="paymentID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/editPayment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.eatthemoon.wallet.ui.listPayments.ListFragment"
+        android:label="@string/list_fragment_title"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/showDetailFromList"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newFragment"
+        android:name="com.eatthemoon.wallet.ui.newPayment.NewFragment"
+        android:label="@string/new_fragment_title"
+        tools:layout="@layout/fragment_new" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.eatthemoon.wallet.ui.edit.EditFragment"
+        android:label="@string/edit_fragment_title"
+        tools:layout="@layout/fragment_edit">
+        <argument
+            android:name="paymentID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.eatthemoon.wallet.ui.onboard.OnBoardFragment"
+        android:label="@string/on_board_fragment_title"
+        tools:layout="@layout/fragment_onboard">
+        <action
+            android:id="@+id/insertCurrent"
+            app:destination="@id/currentFragment" />
+    </fragment>
+</navigation>
